@@ -16,5 +16,5 @@ export interface Feedback {
     upvotedBy: string[]; // Track who upvoted
 }
 
-type SortOption = 'newest' | 'oldest' | 'most_upvotes' | 'least_upvotes' | 'most_comments' | 'least_comments';
-type Page = 'home' | 'add' | 'detail' | 'edit';
+export type SortOption = 'newest' | 'oldest' | 'most_upvotes' | 'least_upvotes' | 'most_comments' | 'least_comments';
+export type Page = 'home' | 'add' | 'detail' | 'edit';
