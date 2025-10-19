@@ -1,0 +1,136 @@
+# ========== NODE MODULES ==========
+# NPM packages (huge folder, can be reinstalled with 'npm install')
+node_modules/
+
+# ========== ENVIRONMENT VARIABLES ==========
+# Contains secrets like database passwords
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ========== LOGS ==========
+# Log files generated during development/production
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# ========== OPERATING SYSTEM FILES ==========
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# ========== IDE / EDITOR FILES ==========
+# VS Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# WebStorm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ========== BUILD / DIST FOLDERS ==========
+# Compiled output
+dist/
+build/
+out/
+
+# ========== TESTING ==========
+# Test coverage reports
+coverage/
+*.coverage
+.nyc_output/
+
+# ========== DATABASE FILES ==========
+# SQLite files (if you ever use SQLite for testing)
+*.sqlite
+*.sqlite3
+*.db
+
+# ========== TEMPORARY FILES ==========
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ========== MISC ==========
+# Lock files (optional - some teams commit these)
+# Uncomment if you want to ignore them
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Other
+.cache/
+.parcel-cache/
+```
+
+---
+
+## 🤔 **Why Each Section Matters**
+
+### **node_modules/**
+```
+Size: 100-300 MB
+Reason: Can reinstall with 'npm install'
+Never commit this!
+```
+
+### **.env**
+```
+Contains: Database passwords, API keys, secrets
+Reason: Security - never expose passwords
+Alternative: Use .env.example (without real values)
+```
+
+### **Logs**
+```
+Contains: Error logs, debug info
+Reason: Generated files, not needed in repo
+Can regenerate anytime
+```
+
+### **OS Files**
+```
+.DS_Store (Mac): Folder settings
+Thumbs.db (Windows): Thumbnail cache
+Reason: Not related to your project
+```
+
+### **IDE Files**
+```
+.vscode/, .idea/: Editor settings
+Reason: Personal preferences
+Each developer has their own setup
