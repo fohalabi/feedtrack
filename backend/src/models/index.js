@@ -7,25 +7,25 @@ const Comment = require('./Comment');
 // A feedback can have many upvotes
 Feedback.hasMany(Comment, {
     foreignKey: 'feedbackId',
-    as: 'comments', // Alias for easier access
-    onDelete: 'CASCADE' // Delete comments if feedback is deleted
+    as: 'comments',
+    onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(Feedback, {
     foreignKey: 'feedbackId',
-    as: 'feedback' // Alias for easier access
+    as: 'feedback'
 });
 
 // A feedback can have many comments 
 Feedback.hasMany(Upvote, {
     foreignKey: 'feedbackId',
-    as: 'upvotes', // Alias for easier access
-    onDelete: 'CASCADE' // Delete upvotes if feedback is deleted
+    as: 'upvotes', 
+    onDelete: 'CASCADE'
 });
 
 Upvote.belongsTo(Feedback, {
     foreignKey: 'feedbackId',
-    as: 'feedback' // Alias for easier access
+    as: 'feedback'
 });
 
 module.exports = {
