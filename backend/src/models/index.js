@@ -16,7 +16,7 @@ Comment.belongsTo(Feedback, {
     as: 'feedback' // Alias for easier access
 });
 
-// A feedback can have many comments
+// A feedback can have many comments 
 Feedback.hasMany(Upvote, {
     foreignKey: 'feedbackId',
     as: 'upvotes', // Alias for easier access
