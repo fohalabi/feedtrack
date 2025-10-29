@@ -19,7 +19,7 @@ Comment.belongsTo(Feedback, {
 // A feedback can have many comments 
 Feedback.hasMany(Upvote, {
     foreignKey: 'feedbackId',
-    as: 'upvotes', 
+    as: 'upvotesList', 
     onDelete: 'CASCADE'
 });
 

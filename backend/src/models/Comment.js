@@ -51,14 +51,14 @@ const Comment = sequelize.define('Comment', {
         }
     }
 }, {
-    tableName: 'comments',
+    tableName: 'Comments',
     timestamps: true,
 
-    indexes: [
-        {
-            fields: ['feedbackId']   // Fast lookup of comments by feedback
-        }
-    ]
+    // indexes: [
+    //     {
+    //         fields: ['feedbackId']   // Fast lookup of comments by feedback
+    //     }
+    // ]
 });
 
 module.exports = Comment;

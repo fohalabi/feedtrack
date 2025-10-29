@@ -33,16 +33,16 @@ const Upvote = sequelize.define('Upvote', {
         }
     }
 }, {
-    tableName: 'upvotes',
+    tableName: 'Upvotes',
     timestamps: true,
 
-    indexes: [
-        {
-            // Unique constraint to prevent duplicate upvotes by the same user on the same feedback
-            unique: true,
-            fields: ['feedbackId', 'userIp']
-        }
-    ]
+    // indexes: [
+    //     {
+    //         // Unique constraint to prevent duplicate upvotes by the same user on the same feedback
+    //         unique: true,
+    //         // fields: ['feedbackId', 'userIp']
+    //     }
+    // ]
 });
 
 module.exports = Upvote;

@@ -66,21 +66,21 @@ const Feedback = sequelize.define('Feedback', {
   }
 }, {
   // Table configuration
-  tableName: 'feedbacks',         
+  tableName: 'Feedbacks',         
   timestamps: true,               
   
   // Indexes for faster queries
-  indexes: [
-    {
-      fields: ['createdAt']
-    },
-    {
-      fields: ['upvotes']         // Fast sorting by upvotes
-    },
-    {
-      fields: ['category']        // Fast filtering by category
-    }
-  ]
+  // indexes: [
+  //   {
+  //     fields: ['createdAt']
+  //   },
+  //   {
+  //     fields: ['upvotes']         // Fast sorting by upvotes
+  //   },
+  //   {
+  //     fields: ['category']        // Fast filtering by category
+  //   }
+  // ]
 });
 
 module.exports = Feedback;
